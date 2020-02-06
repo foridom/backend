@@ -39,5 +39,11 @@ return [
         ],
     ],
 
+    'sms_login' => env('BACKEND_SMS_LOGIN', true),
+
+    'technical_support' => '百一知识产权：https://www.foridom.com',
+
+    'copyright' => '百一知识产权',
+
     'scenario' => env('BACKEND_SCENARIO', 'normal')
 ];

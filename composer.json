@@ -1,6 +1,6 @@
 {
-	"name": "ibrand/backend",
-	"description": "ibrand backend base laravel-admin",
+	"name": "foridom/backend",
+	"description": "foridom backend base laravel-admin",
 	"type": "library",
 	"keywords": [
 		"laravel",
@@ -8,12 +8,12 @@
 		"grid",
 		"form"
 	],
-	"homepage": "https://github.com/ibrandcc/backend",
+	"homepage": "https://github.com/foridom/backend",
 	"license": "MIT",
 	"authors": [
 		{
-			"name": "shjchen",
-			"email": "ibrand.shjchen@foxmail.com"
+			"name": "fanzhuo",
+			"email": "henbuhai@hotmail.com"
 		}
 	],
 	"require": {
