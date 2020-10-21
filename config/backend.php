@@ -39,9 +39,12 @@ return [
         ],
     ],
 
-    'technical_support' => '果酱社区：https://guojiang.club',
+    'technical_support' => '百一知识产权：https://www.foridom.com',
 
-    'copyright' => '果酱社区',
+    'copyright' => '百一知识产权',
 
-    'scenario' => env('BACKEND_SCENARIO', 'normal')
+    'scenario' => env('BACKEND_SCENARIO', 'normal'),
+
+    'sms_login' => env('BACKEND_SMS_LOGIN', true),
+
 ];
