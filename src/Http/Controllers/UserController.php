@@ -105,12 +105,12 @@ class UserController extends Controller
      *
      * @return Form
      */
-    public function form($id = 0)
+    public function form($id=0)
     {
 
-        $Notifications = AdminNotifications::where('admin_id', $id)->pluck('type')->toArray();
+        $Notifications=AdminNotifications::where('admin_id',$id)->pluck('type')->toArray();
 
-        return Administrator::form(function (Form $form) use ($Notifications) {
+        return Administrator::form(function (Form $form) use($Notifications) {
 
             $form->display('id', 'ID');
 
@@ -133,8 +133,8 @@ class UserController extends Controller
             $form->multipleSelect('permissions', trans('admin.permissions'))->options(Permission::all()->pluck('name', 'id'));
 
 
-            $form->checkbox('notifications.wx_type', '')
-                ->options(['wx_orders' => '', 'wx_refund' => ''])->default($Notifications);
+            $form->checkbox('notifications.wx_type','微信模板消息通知')
+                ->options(['wx_orders' => '新订单通知', 'wx_refund' => '新售后通知'])->default($Notifications);
 
 
             $form->display('created_at', trans('admin.created_at'));
@@ -152,17 +152,18 @@ class UserController extends Controller
 
             $form->saved(function (Form $form) {
 
-                $type = $form->notifications['wx_type'];
+                $type=$form->notifications['wx_type'];
 
-                $res = AdminNotifications::where('admin_id', $form->model()->id)->whereIN('type', ['wx_orders', 'wx_refund'])->delete();
+                $res=AdminNotifications::where('admin_id', $form->model()->id)->whereIN('type',['wx_orders','wx_refund'])->delete();
 
                 if (count($type) > 0) {
                     foreach ($type as $item) {
-                        if (!$item) continue;
-                        AdminNotifications::create(['type' => $item, 'admin_id' => $form->model()->id]);
+                        if(!$item) continue;
+                        AdminNotifications::create(['type' => $item,'admin_id'=>$form->model()->id]);
                     }
                 }
             });
+
 
 
         });
