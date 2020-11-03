@@ -39,5 +39,11 @@ return [
         ],
     ],
 
+    'sms_login' => env('BACKEND_SMS_LOGIN', false),
+
+    'technical_support' => '果酱社区：https://guojiang.club',
+
+    'copyright' => '果酱社区',
+
     'scenario' => env('BACKEND_SCENARIO', 'normal')
 ];
