@@ -185,7 +185,7 @@ class AuthAdminController extends AuthController
     {
         return Administrator::form(function (Form $form) {
             $form->display('username', trans('admin.username'));
-            $form->text('name', trans('admin.name'))->rules('required');
+//            $form->text('name', trans('admin.name'))->rules('required');
             $form->email('email', trans('Email'));
             $form->mobile('mobile', trans('Mobile'));
             $form->image('avatar', trans('admin.avatar'));
@@ -207,6 +207,10 @@ class AuthAdminController extends AuthController
 
             $form->saved(function () {
                 admin_toastr(trans('admin.update_succeeded'));
+
+                if (session('admin_check_agent')) {
+                    return redirect(route('admin.orders.index', ['status' => 'all']));
+                }
 
                 return redirect(admin_base_path('auth/setting'));
             });
