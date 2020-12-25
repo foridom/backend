@@ -41,9 +41,9 @@ return [
 
     'sms_login' => env('BACKEND_SMS_LOGIN', false),
 
-    'technical_support' => '百一知识产权：https://www.foridom.com',
+    'technical_support' => '角马知识产权：https://www.jiaomaip.com',
 
-    'copyright' => '百一知识产权',
+    'copyright' => '角马知识产权',
 
     'scenario' => env('BACKEND_SCENARIO', 'normal')
 ];
