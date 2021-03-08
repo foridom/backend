@@ -185,7 +185,7 @@
                     if (data.success) {
                         $('input[name="access_token"]').val(_token);
                         var total = 60;
-                        var message = '请等待{#counter#}秒';
+                        var message = '{#counter#}秒';
                         el.text(message.replace(/\{#counter#}/g, total));
                         var timer = setInterval(function () {
                             total--;
