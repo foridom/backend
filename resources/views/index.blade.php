@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="{{ admin_asset("/vendor/laravel-admin/font-awesome/css/font-awesome.min.css") }}">
 
     <link rel="stylesheet" href="//at.alicdn.com/t/font_u5095o4vzog8pvi.css">
-    <link rel="stylesheet" href="//at.alicdn.com/t/font_2406443_z9nxigh616.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_2406443_nsn104v7ao.css">
     <!-- Theme style -->
     {{--<link rel="stylesheet"
           href="{{ admin_asset("/vendor/laravel-admin/AdminLTE/dist/css/skins/" . config('admin.skin') .".min.css") }}">--}}
